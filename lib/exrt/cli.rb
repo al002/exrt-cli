@@ -1,6 +1,7 @@
 require "exrt/cli/version"
 require "thor"
 require "exrt"
+require_relative "cli/format"
 
 module Exrt
   module Cli
@@ -13,7 +14,7 @@ module Exrt
         base = options["base"]
         symbols = options["symbols"]
         response = Exrt::Rate.latest(base: base, symbols: symbols)
-        puts response
+        puts Exrt::Cli::Format.latest(base, response)
       end
 
       desc "history --base --symbols --start_at --end_at", "show history exchange rates"
