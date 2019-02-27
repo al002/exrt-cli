@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "exrt/cli"
+
+Exrt::Cli::CLI.start(ARGV)
