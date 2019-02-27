@@ -6,15 +6,12 @@ module Exrt
     class Format
       def self.latest(base, response)
         r = JSON.parse(response)
-        arr = []
-        r.each do |symbol, value|
-          arr.push({
-            symbol: symbol,
-            rate: value,
-          })
+        rows = []
+        r['rates'].each do |symbol, value|
+          rows.append([symbol, value])
         end
 
-        arr
+        rows
       end
     end
   end
