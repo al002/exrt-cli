@@ -1,7 +1,6 @@
 require "exrt/cli/version"
 require "thor"
 require "exrt"
-require_relative "cli/format"
 require_relative 'cli/renderer'
 
 module Exrt
@@ -15,8 +14,7 @@ module Exrt
         base = options["base"]
         symbols = options["symbols"]
         response = Exrt::Rate.latest(base: base, symbols: symbols)
-        rows = Exrt::Cli::Format.latest(base, response)
-        r = Exrt::Cli::Renderer.new rows
+        r = Exrt::Cli::Renderer.new(d: response, t: Exrt::Cli::LATEST)
         puts r.render
       end
 
@@ -32,7 +30,8 @@ module Exrt
           start_at: options["start_at"],
           end_at: options["end_at"]
         )
-        puts response
+        r = Exrt::Cli::Renderer.new(d: response, t: Exrt::Cli::HISTORY)
+        puts r.render
       end
     end
   end
