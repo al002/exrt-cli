@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    exrt-cli (0.1.0)
-      exrt
+    exrt-cli (0.2.0)
+      exrt (~> 0.1)
       thor (~> 0.20)
       tty-table (~> 0.10)
 

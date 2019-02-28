@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor", "~> 0.20"
   spec.add_dependency "tty-table", "~> 0.10"
-  spec.add_dependency "exrt"
+  spec.add_dependency "exrt", "~> 0.1"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
