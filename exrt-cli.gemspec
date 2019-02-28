@@ -12,6 +12,8 @@ Gem::Specification.new do |spec|
   spec.summary       = "Exchange rate commad line tool"
   spec.homepage      = "https://github.com/al002/exrt-cli"
 
+  spec.license = 'GPL-3.0'
+
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
@@ -23,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor", "~> 0.20"
   spec.add_dependency "tty-table", "~> 0.10"
-  spec.add_dependency "exrt", "~> 0.1"
+  spec.add_dependency "exrt", "~> 0.1.1"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
