@@ -1,10 +1,4 @@
 PATH
-  remote: ../exrt
-  specs:
-    exrt (0.1.0)
-      faraday (~> 0.15)
-
-PATH
   remote: .
   specs:
     exrt-cli (0.1.0)
@@ -17,6 +11,8 @@ GEM
   specs:
     diff-lcs (1.3)
     equatable (0.5.0)
+    exrt (0.1.0)
+      faraday (~> 0.15)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     multipart-post (2.0.0)
@@ -60,7 +56,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  exrt!
   exrt-cli!
   rake (~> 10.0)
   rspec (~> 3.0)
